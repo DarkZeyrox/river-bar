@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>River Bar — Staff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <main class="admin">
+    <section class="card loginCard">
+      <img src="assets/logo.jpeg" class="smallLogo" alt="Logo River Bar">
+      <p class="eyebrow">Tableau de bord</p>
+      <h1>Espace River Bar</h1>
+      <p class="muted">Employés : suivi des commandes. Patrons : commandes + gestion complète de la carte.</p>
+      <div class="login"><input id="code" type="password" placeholder="Code employé ou patron"><button class="btn" onclick="login()">Connexion</button></div>
+      <p id="adminMsg" class="message"></p>
+    </section>
+
+    <section class="dashboardStats hidden" id="stats">
+      <div><span>Nouvelles</span><b id="statNew">0</b></div>
+      <div><span>En cours</span><b id="statProgress">0</b></div>
+      <div><span>Terminées</span><b id="statDone">0</b></div>
+    </section>
+
+    <section id="bossPanel" class="card hidden">
+      <div class="sectionHead"><p class="eyebrow">Patron</p><h2>Gestion de la carte</h2></div>
+      <form id="itemForm" class="grid4"><input name="name" placeholder="Nom de l'article" required><input name="price" type="number" min="0" placeholder="Prix" required><input name="discount" type="number" min="0" max="100" placeholder="Réduction %"><button class="btn" type="submit">Ajouter</button></form>
+      <div id="bossMenu" class="bossMenu"></div>
+    </section>
+
+    <section class="ordersWrap">
+      <div class="sectionHead"><p class="eyebrow">Live</p><h2>Commandes</h2></div>
+      <section id="orders" class="orders"><p class="empty">Connecte-toi pour voir les commandes.</p></section>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
